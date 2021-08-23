@@ -1,0 +1,99 @@
+.float_1{
+    width:80%;
+    margin: 0 auto;
+    border: 2px solid rgb(38, 0, 255); 
+}
+.float_1::after{
+    content: 'clear:both';
+    display: block;
+    clear:both;
+}
+
+.float_1 .left{
+    width:70%; height: 1000px;
+    border: 2px solid #f00; 
+    float:left;
+}
+.float_1 .right{
+    width:25%; height: 600px;
+    border: 2px solid #f00;
+    float:right;
+}
+
+/* float_2 */
+.float_2{
+    width:80%;
+    margin: 200px auto;
+    border: 2px solid rgb(38, 0, 255); 
+}
+
+.float_2::after{
+    content: 'clear:both';
+    display: block;
+    clear:both;
+}
+
+.float_2 .left{
+    width:30%; height: 400px;
+    background: #f00;
+    float:left;
+    margin-bottom: 5%;
+}
+
+.float_2 .left:nth-of-type(2n){
+                            
+
+    margin: 0 5%;
+}
+
+.float_2 .left:nth-of-type(3n-1){
+    margin: 0 5%;
+}
+
+.float_2 .left:nth-of-type(5){
+    margin: 0 5%;
+}
+
+
+
+/* flex */
+.flex{
+    width: 80%; margin: 0 auto;
+    background: lightgray;
+}
+.flex > h2{
+    background-color: #000;
+    color: #fff; padding: 20px;
+    text-align: center;
+    
+}
+.flex .f-1{
+    display: flex;
+    justify-content: space-between;
+    /* 양끝에 있는 아이템을 좌측과 우측 끝으로 정렬 */
+
+    flex-wrap: wrap;
+    /* 부모크기를 넘는 아이템을 다음줄로 내려줌 */
+}
+
+.flex .f-1 p{
+    flex-shrink: 0;  
+    /* 너비 여부 (0,1) */
+    background-color: darkblue;
+    width: 23%; height: 200px;
+}
+
+
+.flex .f-2 {
+    height: 600px;
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    /* flex-end(우측), flex-start(좌측), center(중앙) */
+    
+    align-items:  center;
+     /* flex-end(하단), flex-start(상단), center(중앙) */
+}
+.flex .f-2  > div {}
+.flex .f-2  > div > p {}
+.flex .f-2  > div > a {}
